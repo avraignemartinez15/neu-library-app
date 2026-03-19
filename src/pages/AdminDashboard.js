@@ -14,7 +14,8 @@ export default function AdminDashboard() {
 
   const purposes = ["all", "Study", "Research", "Borrow Books", "Computer Use", "Group Discussion", "Consultation"];
 
-  useEffect(() => { fetchVisits(); }, [range, startDate, endDate, filterPurpose, filterCollege, employeeOnly]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => { fetchVisits(); }, [range, startDate, endDate, filterPurpose, filterCollege, employeeOnly]);
 
   const fetchVisits = async () => {
     const snapshot = await get(ref(db, "visits"));
